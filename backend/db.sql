@@ -7,7 +7,7 @@ CREATE TABLE usuarios (
     telefone VARCHAR(20) NOT NULL,
     endereco TEXT NOT NULL, 
     senha TEXT NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL ,
     cpfCnpj VARCHAR(45) NOT NULL,
     descricao VARCHAR(500)
 );

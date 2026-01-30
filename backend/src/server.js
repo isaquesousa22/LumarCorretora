@@ -8,34 +8,32 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(express.static("public"));
+app.use(express.static("../frontend"));
 
 
-app.get("/", async (_, res) => {
+
+app.get("/", async (req, res) => {
   try {
     const [data] = await db.query("SELECT * FROM usuarios");
     res.status(200).json(data);
   } catch (error) {
     console.error(error);
-    res.status(500).send("Erro ao listar usuários");
+  res.status(500).json({ erro: "Erro ao listar usuários" });
   }
 });
-
 
 app.post("/register", async (req, res) => {
   const { nome, telefone, endereco, senha, email, cpfCnpj, descricao } = req.body;
 
   try {
-
     const senhaCriptografada = await bcrypt.hash(senha, 10);
 
- 
     const sql = `
-      INSERT INTO usuarios (nome, telefone, endereco, senha, email, "cpfCnpj", descricao)
+      INSERT INTO usuarios (nome, telefone, endereco, senha, email, cpfCnpj, descricao)
       VALUES (?, ?, ?, ?, ?, ?, ?)
     `;
 
-    const [data] = await db.query(sql, [
+    await db.query(sql, [
       nome,
       telefone,
       endereco,
@@ -45,23 +43,23 @@ app.post("/register", async (req, res) => {
       descricao
     ]);
 
-  
-    if (!data) throw new Error("Erro ao inserir dados");
-
-    return res.status(201).json({ mensagem: "Empresa cadastrada com sucesso" });
+    res.status(201).json({ mensagem: "Cadastro realizado com sucesso!" });
 
   } catch (error) {
-    console.error(error);
-    res.status(500).send("Erro ao processar cadastro");
-  }
-});
 
+  console.error("Erro no cadastro:", error);
+
+
+  
+
+  res.status(500).json({ erro: "Erro ao processar cadastro" });
+}
 
 app.post("/login", async (req, res) => {
   const { email, cpfCnpj, senha } = req.body;
 
   try {
-    const sql = "SELECT * FROM usuarios WHERE email = ? AND `cpf/cnpj` = ?";
+    const sql = "SELECT * FROM usuarios WHERE email = ? AND cpfCnpj = ?";
     const [result] = await db.query(sql, [email, cpfCnpj]);
     if (result.length === 0)
       return res.status(400).json({ erro: "Usuário não encontrado" });
@@ -95,7 +93,7 @@ app.put("/editar_usuario", async (req, res) => {
   const { id, nome, telefone, endereco, descricao } = req.body;
 
   if (!id) {
-    return res.status(400).send("ID do usuário é obrigatório");
+   return res.status(500).json({ erro: "Erro ao atualizar usuário" });
   }
 
   try {
@@ -108,13 +106,17 @@ app.put("/editar_usuario", async (req, res) => {
     const [result] = await db.query(sql, [nome, telefone, endereco, descricao, id]);
 
     if (result.affectedRows === 0) {
-      return res.status(404).send("Usuário não encontrado");
+        return res.status(404).json({
+        erro: "Usuário não encontrado"
+      });
     }
 
-    return res.status(200).send("Usuário atualizado com sucesso");
+    return res.json({ mensagem: "Usuário atualizado com sucesso" });
   } catch (error) {
     console.error(error);
-    return res.status(500).send("Erro ao atualizar usuário");
+    res.status(500).json({
+      erro: "Erro ao atualizar usuário"
+       });
   }
 });
 
@@ -157,6 +159,7 @@ app.put("/update-password", async (req, res) => {
 
 
 
-app.listen(3001, () =>
+app.listen(3000, () =>
   console.log("🚀 Servidor rodando em http://localhost:3000")
 );
+});

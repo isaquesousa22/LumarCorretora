@@ -6,15 +6,19 @@
     <meta name="description" content="Lumar Corretora de Seguros - Proteção para você e seu patrimônio.">
     <title>Lumar Corretora de Seguros</title>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="shortcut icon" href="favicon/logo.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="light-theme">
 
 <header class="topo">
     <nav class="nav">
+        
         <h1>LUMAR CORRETORA DE SEGUROS</h1>
+        <img class="logo" src="img/logo.png" alt="logo">
+       
+
             <ul class="menu">
             <li class="menu-title">Fale conosco</li>
                 <li>
@@ -28,12 +32,16 @@
                 <li><a href="#">Sobre nós</a></li>
                 <li><a href="login.html">Parceiros</a></li>
         </ul>
+
     </nav>
 
     <div class="hero">
         <h2>Proteja o que importa!</h2>
         <p>Encontre o seguro ideal para sua vida e patrimônio.</p>
+       
     </div>
+
+    <button type="button" class="btne" id="themeToggle">Escuro</button>
 </header>
 
 <main>
@@ -86,6 +94,9 @@
 <script>
   lucide.createIcons();
 </script>
+
+<script src="app.js"></script>
+<noscript>You need to enable JavaScript to View the full site.</noscript>
 
 </body>
 </html>
