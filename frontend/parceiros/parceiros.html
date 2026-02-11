@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale="1.0">
+  <title>Ecosolutions - Pontos de Descarte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="btn-home" href="/frontend/index.html">
+      Home
+    </a>
+  </nav>
+</header>
+
+<main>
+  <section class="container">
+    <h1>Escolha sua região</h1>
+
+    <!-- FILTRO -->
+    <div class="filtro">"
+      <select id="bairroSelect" onchange="filtrarBairros()">
+        <option value="">Todos os bairros</option>
+        <option>Brooklin</option>
+        <option>Interlagos</option>
+        <option>Vila Mariana</option>
+        <option>Saúde</option>
+        <option>Jabaquara</option>
+        <option>Ipiranga</option>
+        <option>Sacomã</option>
+        <option>Itaim Bibi</option>
+        <option>Paraíso</option>
+        <option>Vila Olímpia</option>
+        <option>Moema</option>
+      </select>
+    </div>
+
+    <h2>Locais de Descarte</h2>
+
+    <div class="grid">
+
+      <!-- CARD 1 -->
+      <div class="card" data-bairro="Brooklin">
+        <h3></h3>
+        <p><strong>Endereço:</strong> </p>
+        <p><strong>Telefone:</strong> </p>
+        <p><strong>Horário:</strong> </p>
+        <p class="descricao"></p>
+        <button onclick="localizar()">
+          Localizar no mapa
+        </button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card" data-bairro="Moema">
+        <h3></h3>
+        <p><strong>Endereço:</strong> /p>
+        <p><strong>Telefone:</strong> </p>
+        <p><strong>Horário:</strong> </p>
+        <p class="descricao">""</p>
+        <button onclick="localizar()">
+          Localizar no mapa
+        </button>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
