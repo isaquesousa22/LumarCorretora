@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="min-h-screen flex items-center justify-center bg-red-950">
+<body class="min-h-screen flex items-center justify-center bg-gray-950">
 
   <form class="w-96 p-6 bg-base-200 rounded-xl shadow-lg" onsubmit="logar(event)">
     <h2 class="text-2xl text-center text-white mb-6 font-bold">Entrar</h2>
@@ -19,23 +19,19 @@
       <input id="emailLogin" type="email" class="input input-bordered w-full" placeholder="Seu email" required />
     </fieldset>
 
-    <fieldset class="fieldset mb-4">
-      <legend class="fieldset-legend">CPF ou CNPJ</legend>
-      <input
-        id="cpfCnpjLogin"
-        type="text"
-        class="input input-bordered w-full"
-        placeholder="CPF ou CNPJ"
-        required
-      />
-    </fieldset>
+ 
 
     <fieldset class="fieldset mb-6">
       <legend class="fieldset-legend">Senha</legend>
       <input id="senhaLogin" type="password" class="input input-bordered w-full" placeholder="Senha" required />
     </fieldset>
 
-      <a class="" href="cadastro.html">Não tenho cadastro</a>
+      <a class="link link-secondary" href="cadastro.html">Não tenho cadastro</a>
+      <br>
+
+      <a href="#" onclick="recuperarSenha(); return false;" class="link link-secondary">
+    Esqueci minha senha
+</a>
 
     <div class="flex justify-between">
       <a href="index.html" class="btn btn-neutral">Cancelar</a>
@@ -45,6 +41,6 @@
     <p id="mensagem" class="text-center mt-4"></p>
   </form>
 
-  <script src="script.js"></script>
+ <script type="module" src="js/login.js"></script>
 </body>
 </html>
