@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dracula">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+     <link rel="shortcut icon" href="/frontend/img/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-base-100">
+
+    <div class="navbar bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
+
+        <div class="flex-1">
+            <a href="index.html" class="btn btn-ghost">
+                ← Voltar
+            </a>
+        </div>
+
+        <div class="flex-none">
+            <h1 class="text-2xl font-bold">
+                Editar Perfil
+            </h1>
+        </div>
+
+    </div>
+
+    <div class="flex justify-center mt-10">
+
+        <div class="card bg-base-200 shadow-2xl w-full max-w-2xl">
+
+            <div class="card-body">
+
+                <form id="formEditar">
+
+                    <div class="grid md:grid-cols-2 gap-5">
+
+                        <div>
+
+                            <label class="font-bold">
+
+                                Nome
+
+                            </label>
+
+                            <input id="nome" class="input input-bordered w-full" required>
+
+                        </div>
+
+                        <div>
+
+                            <label class="font-bold">
+
+                                Email
+
+                            </label>
+
+                            <input id="email" class="input input-bordered w-full" readonly>
+
+                        </div>
+
+                        <div>
+
+                            <label class="font-bold">
+
+                                Telefone
+
+                            </label>
+
+                            <input id="telefone" class="input input-bordered w-full" required>
+
+                        </div>
+
+                        <div>
+
+                            <label class="font-bold">
+
+                                CPF/CNPJ
+
+                            </label>
+
+                            <input id="cpf" class="input input-bordered w-full" readonly>
+
+                        </div>
+
+                        <div class="md:col-span-2">
+
+                            <label class="font-bold">
+
+                                Endereço
+
+                            </label>
+
+                            <input id="endereco" class="input input-bordered w-full" required>
+
+                        </div>
+
+                        <div class="md:col-span-2">
+
+                            <label class="font-bold">
+
+                                Descrição
+
+                            </label>
+
+                            <textarea id="descricao" class="textarea textarea-bordered w-full" rows="5"></textarea>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-actions justify-end mt-8">
+
+                        <button class="btn btn-primary">
+
+                            Salvar Alterações
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="/frontend/js/editarPerfil.js"></script>
+
+</body>
+
+</html>

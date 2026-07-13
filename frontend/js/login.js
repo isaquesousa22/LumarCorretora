@@ -49,7 +49,7 @@ window.recuperarSenha = async function () {
 
         await sendPasswordResetEmail(auth, email);
 
-        alert("Enviamos um link para redefinição de senha para seu e-mail.");
+        alert("Enviamos um link para redefinição de senha para seu e-mail. verifique sua caixa de entrada e spam.");
 
     } catch (erro) {
 

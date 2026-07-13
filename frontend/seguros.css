@@ -177,7 +177,7 @@ body {
     box-shadow: 0 12px 25px rgba(0,0,0,0.25);
 }
 
-/* FOOTER */
+
 footer {
     text-align: center;
     padding: 20px;
@@ -186,7 +186,7 @@ footer {
     color: white;
 }
 
-/* RESPONSIVO */
+
 @media (max-width: 768px) {
 
     body {

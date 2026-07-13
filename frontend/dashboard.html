@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="dracula">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Lumar Corretora</title>
-
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+
 </head>
 
-<body class="bg-slate-100 min-h-screen">
+<body class="bg-slate-100 min-h-screen light-theme">
 
-    
+
     <div class="navbar bg-base-300 text-white shadow-lg">
+
+
+
 
         <div class="flex-1">
             <a class="text-2xl font-bold">
@@ -21,16 +26,18 @@
         </div>
 
         <div class="flex-none">
-            <a href="index.html" class="btn btn-error">
-                Sair
-            </a>
+           <button onclick="sair()" class="btn btn-error">
+                 Sair
+            </button>
+            
         </div>
 
     </div>
 
     <div class="max-w-7xl mx-auto p-8">
 
-      
+
+
         <div class="hero bg-base-200 rounded-xl shadow mb-8">
 
             <div class="hero-content text-center font-bold">
@@ -39,6 +46,9 @@
 
                     <h1 class="text-4xl font-bold">
                         Bem-vindo!
+                        </h1>
+
+                        <span id="nomeUsuario" class="text-2xl">Parceiro</span>
                     </h1>
 
                     <p class="py-3 text-lg">
@@ -51,7 +61,7 @@
 
         </div>
 
-        <!-- Cards -->
+
         <div class="grid md:grid-cols-3 gap-6 text-black">
 
             <div class="card bg-white shadow-xl">
@@ -68,7 +78,8 @@
 
                     <div class="card-actions justify-end">
 
-                        <a href="parceiros/parceiros.html" class="btn btn-secondary bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
+                        <a href="parceiros/parceiros.html"
+                            class="btn btn-secondary bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
                             Ver Parceiros
                         </a>
 
@@ -92,9 +103,10 @@
 
                     <div class="card-actions justify-end">
 
-                        <button class="btn btn-secondary bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
+                        <a href="profile/index.html"
+                            class="btn btn-secondary bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
                             Meu Perfil
-                        </button>
+                        </a>
 
                     </div>
 
@@ -132,6 +144,16 @@
 
     <script type="module" src="js/auth.js"></script>
     <script type="module" src="js/logout.js"></script>
+    <script type="module" src="js/themeToggle.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+
+
+
+
+    <script src="app.js"></script>
+    <noscript>You need to enable JavaScript to View the full site.</noscript>
+
 
 </body>
+
 </html>

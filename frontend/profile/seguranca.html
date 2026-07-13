@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dracula">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/frontend/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="bg-base-100">
+    <div class="navbar bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
+        <div class="flex-1">
+            <a href="index.html" class="btn btn-ghost">
+
+                ← Meu Perfil
+
+            </a>
+
+        </div>
+
+        <div class="flex-none">
+
+            <h1 class="text-2xl font-bold">
+
+                Segurança
+
+            </h1>
+
+        </div>
+
+    </div>
+
+    <div class="flex justify-center mt-10">
+
+        <div class="card bg-base-200 shadow-2xl w-full max-w-lg">
+
+            <div class="card-body">
+
+                <h2 class="card-title justify-center">
+
+                    Alterar Senha
+
+                </h2>
+
+                <form id="formSenha">
+
+                    <div class="form-control">
+
+                        <label class="label">
+
+                            <span class="label-text">
+
+                                Nova senha
+
+                            </span>
+
+                        </label>
+
+                        <input id="novaSenha" type="password" class="input input-bordered" required>
+
+                    </div>
+
+                    <div class="form-control mt-4">
+
+                        <label class="label">
+
+                            <span class="label-text">
+
+                                Confirmar senha
+
+                            </span>
+
+                        </label>
+
+                        <input id="confirmarSenha" type="password" class="input input-bordered" required>
+
+                    </div>
+
+                    <button class="btn btn-primary mt-6">
+
+                        Salvar Nova Senha
+
+                    </button>
+
+                    <a href="alterarEmail.html" class="btn btn-info w-full mt-4">
+
+                        📧 Alterar E-mail
+
+                    </a>
+
+
+                    <div class="divider"></div>
+
+                    <div class="alert alert-warning">
+
+                        <span>
+
+                            Esta ação é permanente. Todos os seus dados serão removidos.
+
+                        </span>
+
+                    </div>
+
+                    <button id="btnExcluir" type="button" class="btn btn-error mt-4">
+
+                        🗑️ Excluir Minha Conta
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="/frontend/js/seguranca.js"></script>
+
+</body>
+
+</html>

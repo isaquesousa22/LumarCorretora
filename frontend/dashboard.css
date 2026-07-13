@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --black: #121212;
+    --white: #cac9c9;
+    --purple: #800080;
+    --blue: #4da3ff;
+}
+
+
+.light-theme {
+    --bg: var(--white);
+    --fontColor: var(--black);
+    --btnBg: #333;
+    --cardBg: #f3f3f3;
+}
+
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--white);
+    --btnBg: #1e1e1e;
+    --cardBg: #222;
+}
+
+
+#themeToggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #4da3ff, #0059b3);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+#themeToggle:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--btnBg);
+    color: black;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .menu {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .nav h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    #themeToggle {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .card {
+        width: 95%;
+    }
+}

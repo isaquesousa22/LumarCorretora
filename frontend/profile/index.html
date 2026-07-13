@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dracula">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+     <link rel="shortcut icon" href="/frontend/img/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-base-100">
+
+    <div class="navbar  bg-gradient-to-r from-cyan-500 to-blue-500 text-primary-content">
+
+        <div class="flex-1">
+            <a href="/frontend/dashboard.html" class="btn btn-ghost">
+                ← Voltar
+            </a>
+        </div>
+
+        <div class="flex-none">
+            <h1 class="text-2xl font-bold">
+                Meu Perfil
+            </h1>
+        </div>
+
+    </div>
+
+    <div class="flex justify-center mt-10">
+
+        <div class="card bg-base-200 shadow-2xl w-full max-w-2xl">
+
+            <div class="card-body">
+
+                <div class="flex flex-col items-center">
+
+                    <div class="bg-primary text-primary-content rounded-full w-24">
+
+                        <span id="iniciais" class="text-4xl"></span>
+
+                    </div>
+
+
+
+                    <h1 id="nomeTitulo" class="mt-4 text-2xl font-bold">
+                        Carregando...
+                    </h1>
+
+                    <p class="opacity-70">
+                        Parceiro Lumar Corretora
+                    </p>
+
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="grid md:grid-cols-2 gap-5">
+
+                    <div>
+
+                        <label class="font-bold">
+
+                            Seu Nome ou da Empresa
+
+                        </label>
+
+                        <p id="nome"></p>
+
+                    </div>
+
+                    <div>
+
+                        <label class="font-bold">
+
+                            Email
+
+                        </label>
+
+                        <p id="email"></p>
+
+                    </div>
+
+                    <div>
+
+                        <label class="font-bold">
+
+                            Telefone
+
+                        </label>
+
+                        <p id="telefone"></p>
+
+                    </div>
+
+                    <div>
+
+                        <label class="font-bold">
+
+                            CPF/CNPJ
+
+                        </label>
+
+                        <p id="cpf"></p>
+
+                    </div>
+
+                    <div class="md:col-span-2">
+
+                        <label class="font-bold">
+
+                            Endereço
+
+                        </label>
+
+                        <p id="endereco"></p>
+
+                    </div>
+
+                    <div class="md:col-span-2">
+
+                        <label class="font-bold">
+
+                            Descrição
+
+                        </label>
+
+                        <p id="descricao"></p>
+
+                    </div>
+
+                </div>
+
+                <div class="card-actions justify-end mt-6">
+
+                    <a href="editarPerfil.html"
+                        class="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600">
+
+                        Editar Perfil
+
+                    </a>
+
+                </div>
+
+                <div class="card-actions justify-end mt-3">
+
+                    <a href="seguranca.html" class="btn btn-outline btn-info">
+
+                        🔒 Segurança
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="/frontend/js/perfil.js"></script>
+
+</body>
+
+</html>
