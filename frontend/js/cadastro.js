@@ -38,6 +38,9 @@ window.registrar = async function () {
             email,
             cpfCnpj,
             descricao,
+
+            status: "pendente",
+
             criadoEm: serverTimestamp()
 
         });
@@ -46,7 +49,7 @@ window.registrar = async function () {
             "<span class='text-success'>Cadastro realizado com sucesso!</span>";
 
         setTimeout(() => {
-        window.location.href = "dashboard.html";
+            window.location.href = "dashboard.html";
         }, 1500);
 
     } catch (erro) {

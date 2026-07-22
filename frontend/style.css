@@ -66,6 +66,10 @@ body {
     left: 10px;
 }
 
+.menu-title {
+    font-weight: bold;
+    color: var(--blue);
+}
 
 .menu {
     list-style: none;
@@ -77,6 +81,7 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
+    
 }
 
 .menu a {

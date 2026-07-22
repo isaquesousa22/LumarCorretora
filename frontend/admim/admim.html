@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dracula">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Painel Administrativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-base-200">
+
+    <div class="navbar bg-primary text-primary-content">
+
+        <div class="flex-1">
+
+            <a class="btn btn-ghost text-xl">
+                Painel Administrativo
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto p-8">
+
+        <h1 class="text-4xl font-bold mb-8">
+
+            Parceiros Pendentes
+
+        </h1>
+
+        <div id="listaParceiros" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init("YQLbyOyJZw6jAIbn_");
+    </script>
+
+    <script type="module" src="/frontend/js/admim.js"></script>
+
+</body>
+
+</html>
