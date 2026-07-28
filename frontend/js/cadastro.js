@@ -1,7 +1,8 @@
 import { auth, db } from "./firebase.js";
 
 import {
-    createUserWithEmailAndPassword
+    createUserWithEmailAndPassword,
+    signOut
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
 import {
@@ -38,19 +39,19 @@ window.registrar = async function () {
             email,
             cpfCnpj,
             descricao,
-
             status: "pendente",
-
             criadoEm: serverTimestamp()
 
         });
 
         mensagem.innerHTML =
-            "<span class='text-success'>Cadastro realizado com sucesso!</span>";
+            "<span class='text-success'>Cadastro realizado com sucesso!<br>Seu cadastro será analisado em até 24 horas.</span>";
+
+        await signOut(auth);
 
         setTimeout(() => {
-            window.location.href = "dashboard.html";
-        }, 1500);
+            window.location.href = "login.html";
+        }, 2500);
 
     } catch (erro) {
 

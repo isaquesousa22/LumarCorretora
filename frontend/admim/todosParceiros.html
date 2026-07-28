@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dracula">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os Parceiros</title>
+    <link rel="shortcut icon" href="/frontend/img/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-base-200">
+
+    <div class="navbar bg-primary text-primary-content">
+
+        <div class="flex-1">
+            <a class="btn btn-ghost text-xl">
+                Todos os Parceiros
+            </a>
+        </div>
+
+        <div class="flex-none">
+            <button class="btn btn-error" onclick="history.back()">
+                Voltar
+            </button>
+        </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto p-8">
+
+        <div class="overflow-x-auto">
+
+            <table class="table table-zebra">
+
+                <thead>
+
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>CPF/CNPJ</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="tabelaParceiros">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init("YQLbyOyJZw6jAIbn_");
+    </script>
+
+    <script type="module" src="/frontend/js/todosParceiros.js"></script>
+
+</body>
+
+</html>

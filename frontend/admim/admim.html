@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-theme="dracula">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Administrativo</title>
+    <link rel="shortcut icon" href="/frontend/img/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+
 </head>
 
 <body class="bg-base-200">
@@ -14,10 +15,16 @@
     <div class="navbar bg-primary text-primary-content">
 
         <div class="flex-1">
-
             <a class="btn btn-ghost text-xl">
                 Painel Administrativo
             </a>
+        </div>
+
+        <div class="flex-none">
+
+            <button class="btn btn-error" onclick="location.href='/frontend/index.html'">
+                Sair
+            </button>
 
         </div>
 
@@ -27,21 +34,81 @@
 
         <h1 class="text-4xl font-bold mb-8">
 
-            Parceiros Pendentes
+            Bem-vindo Administrador
 
         </h1>
 
-        <div id="listaParceiros" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-4 gap-6 mb-8">
+
+            <div class="stat bg-base-100 rounded-box shadow">
+
+                <div class="stat-title">
+                    Pendentes
+                </div>
+
+                <div class="stat-value text-warning" id="pendentes">
+                    0
+                </div>
+
+            </div>
+
+            <div class="stat bg-base-100 rounded-box shadow">
+
+                <div class="stat-title">
+                    Aprovados
+                </div>
+
+                <div class="stat-value text-success" id="aprovados">
+                    0
+                </div>
+
+            </div>
+
+            <div class="stat bg-base-100 rounded-box shadow">
+
+                <div class="stat-title">
+                    Rejeitados
+                </div>
+
+                <div class="stat-value text-error" id="rejeitados">
+                    0
+                </div>
+
+            </div>
+
+            <div class="stat bg-base-100 rounded-box shadow">
+
+                <div class="stat-title">
+                    Total
+                </div>
+
+                <div class="stat-value text-info" id="total">
+                    0
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="flex gap-4 mb-8">
+
+            <a href="parceirosPendentes.html" class="btn btn-primary">
+                Aprovar Parceiros
+            </a>
+
+            <a href="todosParceiros.html" class="btn btn-secondary">
+                Todos os Parceiros
+            </a>
+
+            <a href="perfil.html" class="btn btn-secondary">
+                Meu perfil
+            </a>
+
+
 
         </div>
 
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <script>
-        emailjs.init("YQLbyOyJZw6jAIbn_");
-    </script>
 
     <script type="module" src="/frontend/js/admim.js"></script>
 

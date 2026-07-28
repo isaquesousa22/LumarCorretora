@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-theme="dracula">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parceiros</title>
-
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
@@ -19,19 +20,19 @@
       <input id="emailLogin" type="email" class="input input-bordered w-full" placeholder="Seu email" required />
     </fieldset>
 
- 
+
 
     <fieldset class="fieldset mb-6">
       <legend class="fieldset-legend">Senha</legend>
       <input id="senhaLogin" type="password" class="input input-bordered w-full" placeholder="Senha" required />
     </fieldset>
 
-      <a class="link link-secondary" href="cadastro.html">Não tenho cadastro</a>
-      <br>
+    <a class="link link-secondary" href="cadastro.html">Não tenho cadastro</a>
+    <br>
 
-      <a href="#" onclick="recuperarSenha(); return false;" class="link link-secondary">
-    Esqueci minha senha
-</a>
+    <a href="#" onclick="recuperarSenha(); return false;" class="link link-secondary">
+      Esqueci minha senha
+    </a>
 
     <div class="flex justify-between">
       <a href="index.html" class="btn btn-neutral">Cancelar</a>
@@ -41,6 +42,7 @@
     <p id="mensagem" class="text-center mt-4"></p>
   </form>
 
- <script type="module" src="js/login.js"></script>
+  <script type="module" src="js/login.js"></script>
 </body>
+
 </html>

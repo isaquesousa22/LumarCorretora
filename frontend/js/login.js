@@ -82,11 +82,18 @@ window.logar = async function (event) {
             </span>
         `;
 
-        setTimeout(() => {
+        if (dados.tipo === "admin") {
 
-            window.location.href = "dashboard.html";
+            setTimeout(() => {
+                window.location.href = "admim/admim.html";
+            }, 1000);
 
-        }, 1000);
+        } else {
+
+            setTimeout(() => {
+                window.location.href = "dashboard.html";
+            }, 1000);
+        }
 
     } catch (erro) {
 
