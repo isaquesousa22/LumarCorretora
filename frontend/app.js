@@ -2,48 +2,69 @@
 
 const switcher = document.getElementById('themeToggle');
 
-switcher.addEventListener('click', () => {
-  document.body.classList.toggle('dark-theme');
-  document.body.classList.toggle('light-theme');
+if (switcher) {
+    switcher.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        document.body.classList.toggle('light-theme');
 
-  if (document.body.classList.contains('dark-theme')) {
-    switcher.textContent = 'Claro';
-  } else {
-    switcher.textContent = 'Escuro';
-  }
-});
+        if (document.body.classList.contains('dark-theme')) {
+            switcher.textContent = 'Claro';
+        } else {
+            switcher.textContent = 'Escuro';
+        }
+    });
+}
 
 
+// FORMULÁRIO
 const form = document.getElementById("formcontato");
 
-form.addEventListener("submit", function (e) {
+if (form) {
 
-    e.preventDefault();
+    form.addEventListener("submit", function (e) {
 
-    emailjs.send(
-        "service_uwcfqf8",      // Service ID
-        "template_ilzzb1v",      // Template ID
-        {
-            nome: document.getElementById("nome").value,
-            email: document.getElementById("email").value,
-            mensagem: document.getElementById("mensagem").value
-        }
-    )
+        e.preventDefault();
 
-    .then(() => {
+        emailjs.send(
+            "service_uwcfqf8",
+            "template_ilzzb1v",
+            {
+                nome: document.getElementById("nome").value,
+                email: document.getElementById("email").value,
+                mensagem: document.getElementById("mensagem").value
+            }
+        )
 
-        alert("Mensagem enviada com sucesso!");
+        .then(() => {
 
-        form.reset();
+            alert("Mensagem enviada com sucesso!");
+            form.reset();
 
-    })
+        })
 
-    .catch((erro) => {
+        .catch((erro) => {
 
-    console.error("Erro:", erro);
+            console.error("Erro:", erro);
+            alert("Erro ao enviar mensagem");
 
-    alert(JSON.stringify(erro));
+        });
 
-});
+    });
 
-});
+}
+
+
+// MENU HAMBÚRGUER
+const menuToggle = document.getElementById("menuToggle");
+const menu = document.getElementById("menu");
+
+
+if (menuToggle && menu) {
+
+    menuToggle.addEventListener("click", () => {
+
+        menu.classList.toggle("active");
+
+    });
+
+}
