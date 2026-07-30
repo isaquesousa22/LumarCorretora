@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="corporate">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte ao Cliente | Lumar Corretora</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="/frontend/img/favicon.ico" type="image/x-icon">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-base-200">
+
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-lg">
+
+        <div class="flex-1">
+
+            <a href="/frontend/dashboard.html" class="btn btn-ghost">
+                <i data-lucide="arrow-left"></i>
+                Voltar
+            </a>
+
+        </div>
+
+        <div class="flex-none">
+
+            <h1 class="text-xl font-bold text-primary">
+                Suporte ao Cliente
+            </h1>
+
+        </div>
+
+    </div>
+
+    <!-- Hero -->
+
+    <section class="hero min-h-[300px] bg-primary text-primary-content">
+
+        <div class="hero-content text-center">
+
+            <div>
+
+                <h1 class="text-5xl font-bold">
+                    Como podemos ajudar?
+                </h1>
+
+                <p class="py-6 max-w-2xl">
+                    Nossa equipe está pronta para esclarecer dúvidas, auxiliar em sinistros,
+                    segunda via de boletos, alterações na apólice e muito mais.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Cards -->
+
+    <section class="container mx-auto px-6 py-12">
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="card bg-base-100 shadow-xl">
+
+                <div class="card-body items-center text-center">
+
+                    <i data-lucide="phone" class="w-12 h-12 text-primary"></i>
+
+                    <h2 class="card-title">
+                        Telefone
+                    </h2>
+
+                    <p>(11) 96722-7224</p>
+
+                </div>
+
+            </div>
+
+            <div class="card bg-base-100 shadow-xl">
+
+                <div class="card-body items-center text-center">
+
+                    <i data-lucide="mail" class="w-12 h-12 text-primary"></i>
+
+                    <h2 class="card-title">
+                        E-mail
+                    </h2>
+
+                    <p>sousaconsultor1@gmail.com</p>
+
+                </div>
+
+            </div>
+
+            <div class="card bg-base-100 shadow-xl">
+
+                <div class="card-body items-center text-center">
+
+                    <i data-lucide="message-circle" class="w-12 h-12 text-primary"></i>
+
+                    <h2 class="card-title">
+                        WhatsApp
+                    </h2>
+
+                    <a class="btn btn-primary" href="https://wa.me/5511967227224" target="_blank">
+
+                        Conversar Agora
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Formulário -->
+
+    <section class="container mx-auto px-6 pb-12">
+
+        <div class="card bg-base-100 shadow-xl">
+
+            <div class="card-body">
+
+                <h2 class="card-title text-2xl">
+                    Envie sua solicitação
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <form id="formSuporte">
+
+                        <input id="nome" type="text" placeholder="Nome" class="input input-bordered w-full" required>
+
+
+                        <input id="email" type="email" placeholder="E-mail" class="input input-bordered w-full"
+                            required>
+
+
+                        <input id="assunto" type="text" placeholder="Assunto" class="input input-bordered w-full"
+                            required>
+
+
+                        <textarea id="mensagem" class="textarea textarea-bordered h-40"
+                            placeholder="Descreva sua solicitação" required></textarea>
+
+
+                        <button class="btn btn-primary" type="submit">
+
+                            Enviar Solicitação
+
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+    </section>
+
+    <!-- FAQ -->
+
+    <section class="container mx-auto px-6 pb-16">
+
+        <h2 class="text-3xl font-bold text-center mb-8">
+
+            Perguntas Frequentes
+
+        </h2>
+
+        <div class="space-y-4">
+
+            <div class="collapse collapse-arrow bg-base-100">
+
+                <input type="radio" name="faq">
+
+                <div class="collapse-title text-lg font-medium">
+
+                    Como acionar meu seguro?
+
+                </div>
+
+                <div class="collapse-content">
+
+                    Entre em contato conosco por telefone ou WhatsApp para receber todo o suporte necessário.
+
+                </div>
+
+            </div>
+
+            <div class="collapse collapse-arrow bg-base-100">
+
+                <input type="radio" name="faq">
+
+                <div class="collapse-title text-lg font-medium">
+
+                    Como solicitar a segunda via do boleto?
+
+                </div>
+
+                <div class="collapse-content">
+
+                    Basta enviar uma solicitação pelo formulário ou entrar em contato com nossa equipe.
+
+                </div>
+
+            </div>
+
+            <div class="collapse collapse-arrow bg-base-100">
+
+                <input type="radio" name="faq">
+
+                <div class="collapse-title text-lg font-medium">
+
+                    Posso alterar minha apólice?
+
+                </div>
+
+                <div class="collapse-content">
+
+                    Sim. Nossa equipe auxilia na inclusão ou alteração de coberturas conforme sua necessidade.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer footer-center bg-neutral text-neutral-content p-6">
+
+        <p>
+
+            © 2026 Lumar Corretora de Seguros - Todos os direitos reservados.
+
+        </p>
+
+    </footer>
+
+    <script>
+
+        lucide.createIcons();
+
+    </script>
+
+    <script type="module" src="/frontend/js/suporte.js"></script>
+
+</body>
+
+</html>

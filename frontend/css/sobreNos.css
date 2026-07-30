@@ -1,0 +1,56 @@
+
+
+.sobre{
+    width:90%;
+    max-width:1000px;
+    margin:50px auto;
+    text-align:center;
+}
+
+.sobre h2{
+    color:#4da3ff;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.sobre p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.missao{
+    width:90%;
+    margin:50px auto;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.missao .card{
+    width:300px;
+}
+
+.missao i{
+    width:60px;
+    height:60px;
+    color:#4da3ff;
+    margin-bottom:15px;
+}
+
+@media (max-width:768px){
+
+    .sobre h2{
+        font-size:30px;
+    }
+
+    .sobre p{
+        font-size:16px;
+    }
+
+    .missao{
+        flex-direction:column;
+        align-items:center;
+    }
+
+}

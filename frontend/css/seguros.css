@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #121212;
+    --white: #dad6d6;
+    --blue: #4da3ff;
+}
+
+.light-theme {
+    --bg: var(--white);
+    --fontColor: var(--black);
+    --btnBg: #333;
+    --cardBg: #f3f3f3;
+}
+
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--white);
+    --btnBg: #1e1e1e;
+    --cardBg: #222;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--fontColor);
+    padding-top: 100px;
+    transition: .3s;
+}
+
+/* NAVBAR */
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: var(--btnBg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+}
+
+.nav h1 {
+    color: var(--blue);
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.btnn {
+    position: absolute;
+    left: 20px;
+    color: #fff;
+    background: linear-gradient(135deg, #4da3ff, #0059b3);
+    padding: 10px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.btnn:hover {
+    transform: scale(1.1);
+}
+
+#themeToggle {
+    position: absolute;
+    right: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #4da3ff, #0059b3);
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#themeToggle:hover {
+    transform: scale(1.1);
+}
+
+/* HERO */
+
+.hero {
+    margin: 40px auto;
+    width: 90%;
+}
+
+.image-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    transition: .5s;
+}
+
+.image-container:hover img {
+    transform: scale(1.08);
+}
+
+.text-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    transition: .4s;
+}
+
+.text-overlay h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.text-overlay p {
+    max-width: 700px;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+/* SEÇÕES */
+
+.coberturas {
+    margin: 60px auto;
+    width: 90%;
+    text-align: center;
+}
+
+.coberturas h2 {
+    font-size: 38px;
+    color: var(--blue);
+    margin-bottom: 40px;
+}
+
+/* CARDS */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    width: 300px;
+    background: var(--cardBg);
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12);
+    transition: .35s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, .25);
+}
+
+.card h3 {
+    color: var(--blue);
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.7;
+}
+
+/* BOTÃO */
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #4da3ff, #0059b3);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 60px;
+    background: var(--btnBg);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px) {
+
+    body {
+        padding-top: 90px;
+    }
+
+    .nav {
+        height: 70px;
+    }
+
+    .nav h1 {
+        font-size: 15px;
+        width: 180px;
+        text-align: center;
+    }
+
+    .btnn {
+        left: 10px;
+        padding: 8px;
+    }
+
+    #themeToggle {
+        right: 10px;
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .text-overlay {
+        position: static;
+        background: var(--cardBg);
+        color: var(--fontColor);
+    }
+
+    .text-overlay h2 {
+        font-size: 28px;
+    }
+
+    .text-overlay p {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .coberturas h2 {
+        font-size: 28px;
+    }
+
+}
