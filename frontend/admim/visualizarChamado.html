@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Chamado</title>
+    <link rel="shortcut icon" href="/frontend/img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-base-200">
+
+
+
+    <div class="container mx-auto p-8">
+
+
+
+        <div class="card bg-base-100 shadow-xl">
+
+            <div class="flex-1 ">
+                <a href="/frontend/admim/suporte.html" class="btn btn-ghost  text-2xl ">
+                    <i data-lucide="arrow-left"></i>
+                    Voltar
+                </a>
+
+            </div>
+
+            <div class="card-body">
+
+                <h2 class="card-title text-3xl">
+                    Chamado de Suporte
+                </h2>
+
+                <div class="divider"></div>
+
+                <p><strong>Nome:</strong> <span id="nome"></span></p>
+
+                <p><strong>E-mail:</strong> <span id="email"></span></p>
+
+                <p><strong>Assunto:</strong> <span id="assunto"></span></p>
+
+                <p><strong>Status:</strong> <span id="status"></span></p>
+
+                <div class="mt-4">
+
+                    <h3 class="font-bold text-lg">
+                        Mensagem
+                    </h3>
+
+                    <div class="bg-base-200 rounded-xl p-4 mt-2">
+
+                        <p id="mensagem"></p>
+
+                    </div>
+
+                </div>
+
+                <div class="divider"></div>
+
+                <h3 class="font-bold text-lg mt-6">
+                    Resposta ao Cliente
+                </h3>
+
+                <textarea id="resposta" class="textarea textarea-bordered h-40 w-full"
+                    placeholder="Digite a resposta ao cliente...">
+</textarea>
+
+                <div class="mt-4">
+
+                    <label class="font-semibold">
+                        Status do Chamado
+                    </label>
+
+                    <select id="statusSelect" class="select select-bordered w-full mt-2">
+
+                        <option value="Aberto">
+                            Aberto
+                        </option>
+
+                        <option value="Em andamento">
+                            Em andamento
+                        </option>
+
+                        <option value="Resolvido">
+                            Resolvido
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <button id="salvar" class="btn btn-primary w-full mt-6">
+
+                    Salvar Atendimento
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="/frontend/js/visualizarChamado.js"></script>
+
+</body>
+
+</html>

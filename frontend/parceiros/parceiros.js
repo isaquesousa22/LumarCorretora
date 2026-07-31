@@ -1,8 +1,10 @@
 import { db } from "../js/firebase.js";
 
 import {
-    collection,
-    getDocs
+   collection,
+    getDocs,
+    query,
+    where
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 
 const cardsContainer = document.getElementById("cardsContainer");
@@ -13,7 +15,12 @@ let parceiros = [];
 
 async function carregarParceiros() {
 
-    const snapshot = await getDocs(collection(db, "usuarios"));
+    const q = query(
+        collection(db, "usuarios"),
+        where("status", "==", "aprovado")
+    );
+
+    const snapshot = await getDocs(q);
 
     parceiros = [];
 

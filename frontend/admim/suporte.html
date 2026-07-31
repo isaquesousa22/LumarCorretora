@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamados de Suporte</title>
+    <link rel="shortcut icon" href="/frontend/img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-base-200">
+
+    <div class="navbar bg-base-100 shadow">
+
+        <div class="flex-1">
+
+            <a href="/frontend/admim/admim.html" class="btn btn-ghost">
+                <i data-lucide="arrow-left"></i>
+                Voltar
+            </a>
+
+        </div>
+
+        <div class="flex-10">
+            <h1 class="text-2xl font-bold">
+                Chamados de Suporte
+            </h1>
+        </div>
+
+    </div>
+
+    <div class="overflow-x-auto p-8">
+
+        <table class="table table-zebra">
+
+            <thead>
+
+                <tr>
+
+                    <th>Cliente</th>
+                    <th>Assunto</th>
+                    <th>Status</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="listaChamados">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script type="module" src="/frontend/js/adminSuporte.js"></script>
+
+</body>
+
+</html>
