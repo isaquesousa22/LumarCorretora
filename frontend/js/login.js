@@ -109,9 +109,7 @@ window.logar = async function (event) {
 
 };
 
-// =======================
-// RECUPERAR SENHA
-// =======================
+
 
 window.recuperarSenha = async function () {
 
